@@ -1,0 +1,90 @@
+# 🛡️ Threat Hunt Report — TH-001  
+**Hypothesis-Led Threat Hunting | Microsoft Defender XDR Lab**
+
+---
+
+## 📌 Overview
+This project demonstrates a **hypothesis-led threat hunting investigation** conducted in a custom-built Security Operations lab using:
+
+- Microsoft Defender for Endpoint (EDR)
+- Microsoft Sentinel (SIEM)
+- Sysmon (Enhanced Logging)
+- KQL (Advanced Hunting)
+
+The objective was to simulate a **realistic multi-stage cyber attack** and validate detection capabilities across the environment.
+
+---
+
+## 🎯 Objective
+To proactively identify attacker behaviour using **threat intelligence and MITRE ATT&CK techniques**, then:
+
+- Detect malicious activity across telemetry
+- Reconstruct the attack timeline
+- Improve detection capabilities
+- Develop actionable security controls
+
+---
+
+## 🧠 Threat Hunting Hypothesis
+> Based on threat intelligence, an attacker may use PowerShell execution, scheduled task persistence, and living-off-the-land techniques to establish and maintain access within a Windows environment.
+
+---
+
+## 🏗️ Lab Environment
+
+| Component | Technology |
+|----------|-----------|
+| SIEM | Microsoft Sentinel |
+| EDR | Microsoft Defender for Endpoint |
+| Logging | Sysmon (SwiftOnSecurity config) |
+| Endpoint | Windows 11 Enterprise |
+| Scripting | PowerShell with ScriptBlock Logging |
+| Attack Simulation | Atomic Red Team |
+
+---
+
+## ⚔️ MITRE ATT&CK Techniques Simulated
+
+| Technique | ID | Tactic |
+|----------|----|-------|
+| PowerShell Execution | T1059.001 | Execution |
+| Scheduled Task Persistence | T1053.005 | Persistence |
+| Account Discovery | T1087.001 | Discovery |
+| Network Connections Discovery | T1049 | Discovery |
+| LSASS Credential Dump | T1003.001 | Credential Access |
+
+---
+
+## 🔍 Methodology
+
+1. **Simulate Attack**
+   - Used Atomic Red Team to execute techniques sequentially
+
+2. **Query Telemetry**
+   - Leveraged KQL in Defender Advanced Hunting
+
+3. **Analyse Behaviour**
+   - Identified anomalies such as:
+     - Unusual parent-child processes
+     - Off-hours activity
+     - Known attacker tools
+
+4. **Build Timeline**
+   - Reconstructed attack chain from execution to persistence
+
+5. **Improve Detection**
+   - Created custom detection rules based on findings
+
+---
+
+## 🚨 Key Findings
+
+### 🔹 Suspicious PowerShell Execution (T1059.001)
+- `powershell.exe` launched via `explorer.exe`
+- Occurred at **02:56 AM (off-hours)**
+- Indicates potential post-exploitation activity
+
+---
+
+### 🔹 Scheduled Task Persistence (T1053.005)
+- Task created with:
