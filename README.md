@@ -155,7 +155,36 @@ This lab provides:
 2. **Query Telemetry**
    - Leveraged KQL in Defender Advanced Hunting
   
-     
+     ##  Hunt Findings
+
+---
+
+###  FINDING F-001 — Suspicious PowerShell Execution  
+**Severity:** Medium  
+**MITRE Technique:** T1059.001 — Command and Scripting Interpreter: PowerShell  
+**Timestamp:** Apr 29, 2026 — 02:56:30 AM  
+
+**Evidence:**  
+- `powershell.exe` spawned by `explorer.exe` under account `jhoeadmin`
+
+**Why This Is Suspicious:**  
+PowerShell launched directly from the Windows Explorer shell at **02:56 AM** is atypical for legitimate activity.  
+Attackers commonly use PowerShell as a post-exploitation tool due to its deep integration with the operating system and powerful scripting capabilities.
+
+**KQL Query Used:**
+```kql
+DeviceProcessEvents
+| where FileName == "powershell.exe"
+| where Timestamp > ago(2h)
+| project Timestamp, FileName, ProcessCommandLine,
+         AccountName, InitiatingProcessFileName
+| sort by Timestamp asc
+
+
+
+
+
+
 
 3. **Analyse Behaviour**
    - Identified anomalies such as:
