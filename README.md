@@ -1,7 +1,7 @@
 #  Threat Hunt Report — TH-001  
 **Hypothesis-Led Threat Hunting | Microsoft Defender XDR Lab**
 
----
+
 
 ##  Overview
 This project demonstrates a **hypothesis-led threat hunting investigation** conducted in a custom-built Security Operations lab using:
@@ -13,7 +13,7 @@ This project demonstrates a **hypothesis-led threat hunting investigation** cond
 
 The objective was to simulate a **realistic multi-stage cyber attack** and validate detection capabilities across the environment.
 
----
+
 
 ##  Objective
 To proactively identify attacker behaviour using **threat intelligence and MITRE ATT&CK techniques**, then:
@@ -23,12 +23,12 @@ To proactively identify attacker behaviour using **threat intelligence and MITRE
 - Improve detection capabilities
 - Develop actionable security controls
 
----
+
 
 ##  Threat Hunting Hypothesis
 > Based on threat intelligence, an attacker may use PowerShell execution, scheduled task persistence, and living-off-the-land techniques to establish and maintain access within a Windows environment.
 
----
+
 
 ##  Lab Environment
 
@@ -41,7 +41,7 @@ To proactively identify attacker behaviour using **threat intelligence and MITRE
 | Scripting | PowerShell with ScriptBlock Logging |
 | Attack Simulation | Atomic Red Team |
 
----
+
 
 ##  MITRE ATT&CK Techniques Simulated
 
