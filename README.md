@@ -200,6 +200,47 @@ DeviceProcessEvents
 ```bash
 schtasks /create /tn "T1053_005_OnLogon" /sc onlogon /tr "cmd.exe /c calc.exe"
 
+```
+
+
+
+**Why This Is Suspicious:**  
+
+A scheduled task configured to execute on every user logon is a well-known persistence mechanism.
+This ensures the attacker's payload survives system reboots and re-executes automatically.
+
+In real-world scenarios, calc.exe would likely be replaced with malicious code.
+
+**KQL Query Used:**
+```kql
+DeviceProcessEvents
+| where FileName == "schtasks.exe"
+| where ProcessCommandLine has "/create"
+| where Timestamp > ago(2h)
+| project Timestamp, FileName, ProcessCommandLine, AccountName
+| sort by Timestamp asc
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 3. **Analyse Behaviour**
