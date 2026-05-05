@@ -147,9 +147,15 @@ This lab provides:
 
 1. **Simulate Attack**
    - Used Atomic Red Team to execute techniques sequentially
+  
+   <img width="1295" height="1178" alt="Image" src="https://github.com/user-attachments/assets/934a2292-5bc6-4a00-a014-378118921e2e" />  
+
+<img width="3383" height="1402" alt="Image" src="https://github.com/user-attachments/assets/5a63465f-f046-4fff-ad59-9567fe21a0b1" />
 
 2. **Query Telemetry**
    - Leveraged KQL in Defender Advanced Hunting
+  
+     
 
 3. **Analyse Behaviour**
    - Identified anomalies such as:
