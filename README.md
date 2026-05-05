@@ -53,6 +53,8 @@ To simulate a realistic enterprise security environment, I built a cloud-based l
   - `jhoelab1.onmicrosoft.com`
 - Created administrative user accounts for testing and simulation
 
+  <img width="3389" height="1402" alt="Image" src="https://github.com/user-attachments/assets/de9a6d8f-dfac-4640-b300-6dbd9dc46f2b" />
+
 ---
 
 ###  Step 2 — Azure Environment
