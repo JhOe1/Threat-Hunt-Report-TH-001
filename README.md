@@ -37,7 +37,7 @@ To proactively identify attacker behaviour using **threat intelligence and MITRE
 | SIEM | Microsoft Sentinel |
 | EDR | Microsoft Defender for Endpoint |
 | Logging | Sysmon (SwiftOnSecurity config) |
-| Endpoint | Windows 11 Enterprise | Windows 2022 server
+| Endpoint | Windows 11 Enterprise | Windows 2022 server|
 | Scripting | PowerShell with ScriptBlock Logging |
 | Attack Simulation | Atomic Red Team |
 
