@@ -67,17 +67,22 @@ To simulate a realistic enterprise security environment, I built a cloud-based l
 ###  Step 3 — Virtual Machine Deployment
 Deployed two virtual machines to simulate a small enterprise environment:
 
-#### 1. Windows Server (Infrastructure)
+#### 1. Windows Server 2022 (Infrastructure)
 - Role: Simulated enterprise services (e.g. domain services, central management)
 - Used for:
   - Identity and access simulation
   - Potential attack surface
+ <img width="573" height="263" alt="Image" src="https://github.com/user-attachments/assets/c70b69c4-b909-4707-8491-5f1e983600a8" />
+
 
 #### 2. Windows 11 Endpoint
 - Role: User workstation (target machine)
 - Used for:
   - Attack simulation
   - Threat detection and analysis
+
+<img width="605" height="257" alt="Image" src="https://github.com/user-attachments/assets/3df53195-fa1e-45c6-8649-b9e3def5476a" />
+
 
 ---
 
