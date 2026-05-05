@@ -1,9 +1,9 @@
-# 🛡️ Threat Hunt Report — TH-001  
+#  Threat Hunt Report — TH-001  
 **Hypothesis-Led Threat Hunting | Microsoft Defender XDR Lab**
 
 ---
 
-## 📌 Overview
+##  Overview
 This project demonstrates a **hypothesis-led threat hunting investigation** conducted in a custom-built Security Operations lab using:
 
 - Microsoft Defender for Endpoint (EDR)
@@ -15,7 +15,7 @@ The objective was to simulate a **realistic multi-stage cyber attack** and valid
 
 ---
 
-## 🎯 Objective
+##  Objective
 To proactively identify attacker behaviour using **threat intelligence and MITRE ATT&CK techniques**, then:
 
 - Detect malicious activity across telemetry
@@ -25,12 +25,12 @@ To proactively identify attacker behaviour using **threat intelligence and MITRE
 
 ---
 
-## 🧠 Threat Hunting Hypothesis
+##  Threat Hunting Hypothesis
 > Based on threat intelligence, an attacker may use PowerShell execution, scheduled task persistence, and living-off-the-land techniques to establish and maintain access within a Windows environment.
 
 ---
 
-## 🏗️ Lab Environment
+##  Lab Environment
 
 | Component | Technology |
 |----------|-----------|
@@ -43,7 +43,7 @@ To proactively identify attacker behaviour using **threat intelligence and MITRE
 
 ---
 
-## ⚔️ MITRE ATT&CK Techniques Simulated
+##  MITRE ATT&CK Techniques Simulated
 
 | Technique | ID | Tactic |
 |----------|----|-------|
@@ -55,7 +55,7 @@ To proactively identify attacker behaviour using **threat intelligence and MITRE
 
 ---
 
-## 🔍 Methodology
+##  Methodology
 
 1. **Simulate Attack**
    - Used Atomic Red Team to execute techniques sequentially
@@ -77,14 +77,14 @@ To proactively identify attacker behaviour using **threat intelligence and MITRE
 
 ---
 
-## 🚨 Key Findings
+##  Key Findings
 
-### 🔹 Suspicious PowerShell Execution (T1059.001)
+###  Suspicious PowerShell Execution (T1059.001)
 - `powershell.exe` launched via `explorer.exe`
 - Occurred at **02:56 AM (off-hours)**
 - Indicates potential post-exploitation activity
 
 ---
 
-### 🔹 Scheduled Task Persistence (T1053.005)
+###  Scheduled Task Persistence (T1053.005)
 - Task created with:
