@@ -41,6 +41,85 @@ To proactively identify attacker behaviour using **threat intelligence and MITRE
 | Scripting | PowerShell with ScriptBlock Logging |
 | Attack Simulation | Atomic Red Team |
 
+
+##  Lab Setup — Microsoft Security Environment
+
+To simulate a realistic enterprise security environment, I built a cloud-based lab using Microsoft technologies.
+
+###  Step 1 — Identity & Tenant Setup
+- Created a Microsoft account (Outlook)
+- Registered for a **Microsoft 365 E5 Developer tenant**
+- Provisioned a custom domain:
+  - `jhoelab1.onmicrosoft.com`
+- Created administrative user accounts for testing and simulation
+
+---
+
+###  Step 2 — Azure Environment
+- Signed up for a **Microsoft Azure free trial**
+- Received **$200 free credits**
+- Configured Azure subscription for lab deployment
+
+---
+
+###  Step 3 — Virtual Machine Deployment
+Deployed two virtual machines to simulate a small enterprise environment:
+
+#### 1. Windows Server (Infrastructure)
+- Role: Simulated enterprise services (e.g. domain services, central management)
+- Used for:
+  - Identity and access simulation
+  - Potential attack surface
+
+#### 2. Windows 11 Endpoint
+- Role: User workstation (target machine)
+- Used for:
+  - Attack simulation
+  - Threat detection and analysis
+
+---
+
+###  Step 4 — Security Stack Configuration
+
+Configured a full detection and monitoring stack:
+
+- **Microsoft Defender for Endpoint (EDR)**
+  - Installed and onboarded endpoint
+  - Enabled real-time protection and telemetry
+
+- **Microsoft Sentinel (SIEM)**
+  - Connected to Defender XDR
+  - Enabled log ingestion and correlation
+
+- **Sysmon (Enhanced Logging)**
+  - Installed with SwiftOnSecurity configuration
+  - Captures detailed system activity
+
+- **PowerShell Logging**
+  - Enabled ScriptBlock logging via Group Policy / registry
+  - Provides visibility into attacker commands
+
+---
+
+###  Step 5 — Attack Simulation
+- Used **Atomic Red Team** to simulate real-world attacker techniques
+- Executed MITRE ATT&CK-based scenarios including:
+  - PowerShell execution
+  - Persistence mechanisms
+  - Discovery techniques
+  - Credential access attempts
+
+---
+
+###  Outcome
+This lab provides:
+- End-to-end visibility across **endpoint, identity, and network activity**
+- A controlled environment for **threat hunting and incident response**
+- Realistic telemetry for **hypothesis-led investigations**
+
+
+
+
 <img width="3443" height="804" alt="Image" src="https://github.com/user-attachments/assets/1ce34552-9270-4df5-8186-9467a4886fd8" />
 
 ##  MITRE ATT&CK Techniques Simulated
