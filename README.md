@@ -183,7 +183,7 @@ DeviceProcessEvents
 
 
 ```
-
+<img width="3385" height="1402" alt="Image" src="https://github.com/user-attachments/assets/9071b0d9-b443-43b1-8921-b87a5eb5a26c" />
 
 3. **Analyse Behaviour**
    - Identified anomalies such as:
