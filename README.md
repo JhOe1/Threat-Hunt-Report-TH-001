@@ -41,7 +41,7 @@ To proactively identify attacker behaviour using **threat intelligence and MITRE
 | Scripting | PowerShell with ScriptBlock Logging |
 | Attack Simulation | Atomic Red Team |
 
-
+<img width="3443" height="804" alt="Image" src="https://github.com/user-attachments/assets/1ce34552-9270-4df5-8186-9467a4886fd8" />
 
 ##  MITRE ATT&CK Techniques Simulated
 
