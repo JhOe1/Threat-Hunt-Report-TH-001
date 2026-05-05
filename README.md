@@ -86,6 +86,8 @@ Configured a full detection and monitoring stack:
 - **Microsoft Defender for Endpoint (EDR)**
   - Installed and onboarded endpoint
   - Enabled real-time protection and telemetry
+ <img width="3390" height="1404" alt="Image" src="https://github.com/user-attachments/assets/777b8e11-ddff-450b-bf1c-a17582db59ef" />
+  
 
 - **Microsoft Sentinel (SIEM)**
   - Connected to Defender XDR
