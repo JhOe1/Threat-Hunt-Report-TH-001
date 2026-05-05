@@ -185,6 +185,23 @@ DeviceProcessEvents
 ```
 <img width="3385" height="1402" alt="Image" src="https://github.com/user-attachments/assets/9071b0d9-b443-43b1-8921-b87a5eb5a26c" />
 
+
+###  FINDING F-002 — Scheduled Task Persistence Established
+
+**Severity:** High  
+**MITRE Technique:** T1053.005 — Scheduled Task/Job: Scheduled Task  
+**Timestamp:** Apr 29, 2026 — 03:07:04 AM  
+
+---
+
+###  Evidence
+- Command executed:
+
+```bash
+schtasks /create /tn "T1053_005_OnLogon" /sc onlogon /tr "cmd.exe /c calc.exe"
+
+
+
 3. **Analyse Behaviour**
    - Identified anomalies such as:
      - Unusual parent-child processes
